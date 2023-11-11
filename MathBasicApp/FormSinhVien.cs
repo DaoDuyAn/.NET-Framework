@@ -14,13 +14,27 @@ namespace MathBasicApp
     public partial class FormSinhVien : Form
     {
 
-        public FormSinhVien()
+        public FormSinhVien(SinhVien sinhVien)
         {
             InitializeComponent();
-            LoadSinhVien();
+
+
+            this.sinhVien = sinhVien;
+            if (sinhVien != null)
+            {
+                txtmsv.Text = sinhVien.MaSinhVien;
+                txtho.Text = sinhVien.Ho;
+                txtten.Text = sinhVien.Ten;
+                txtns.Text = sinhVien.NoiSinh;
+                txtqq.Text = sinhVien.QueQuan;
+                dtpns.Value = sinhVien.NgaySinh;
+                cbbgt.SelectedIndex = (int)sinhVien.GioiTinh;
+                picHinhDaiDien.ImageLocation = sinhVien.HinhDaiDien;
+            }
+            //LoadSinhVienTuFile();
         }
 
-        void LoadSinhVien()
+        void LoadSinhVienTuFile()
         {
             if (File.Exists(fileName))
             {
@@ -32,7 +46,7 @@ namespace MathBasicApp
                 txtten.Text = sinhVien.Ten;
                 txtns.Text = sinhVien.NoiSinh;
                 txtqq.Text = sinhVien.QueQuan;
-                dtp.Value = sinhVien.NgaySinh;
+                dtpns.Value = sinhVien.NgaySinh;
                 cbbgt.SelectedIndex = (int)sinhVien.GioiTinh;
                 picHinhDaiDien.ImageLocation = sinhVien.HinhDaiDien;
             }
@@ -55,24 +69,56 @@ namespace MathBasicApp
 
         }
 
+        public SinhVien sinhVien { set; get; }
         private void btnDongY_Click(object sender, EventArgs e)
         {
-            var sinhVien = new SinhVien
+            if (sinhVien != null)
             {
-                MaSinhVien = txtmsv.Text,
-                Ho = txtho.Text,
-                Ten = txtten.Text,
-                NgaySinh = dtp.Value,
-                GioiTinh = (GIOITINH)cbbgt.SelectedIndex,
-                QueQuan = txtqq.Text,
-                NoiSinh = txtns.Text,
-                HinhDaiDien = picHinhDaiDien.ImageLocation,
-            };
+                // Thêm mới
+                sinhVien.Ho = txtho.Text;
+                sinhVien.Ten = txtten.Text;
+                sinhVien.NoiSinh = txtns.Text;
+                sinhVien.QueQuan = txtqq.Text;
+                sinhVien.MaSinhVien = txtmsv.Text;
+                sinhVien.HinhDaiDien = picHinhDaiDien.ImageLocation;
+                sinhVien.NgaySinh = dtpns.Value;
+                sinhVien.GioiTinh = (GIOITINH)cbbgt.SelectedIndex;
+                DialogResult = DialogResult.OK;
+            }
+            else
+            {
 
-            var json = sinhVien.ToString();
-            File.WriteAllText(fileName, json);
-            MessageBox.Show("Bạn đã lưu dữ liệu thành công", "Thông báo",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Cập nhật
+                sinhVien = new SinhVien();
+                sinhVien.Ho = txtho.Text;
+                sinhVien.Ten = txtten.Text;
+                sinhVien.NoiSinh = txtns.Text;
+                sinhVien.QueQuan = txtqq.Text;
+                sinhVien.MaSinhVien = txtmsv.Text;
+                sinhVien.HinhDaiDien = picHinhDaiDien.ImageLocation;
+                sinhVien.NgaySinh = dtpns.Value;
+                sinhVien.GioiTinh = (GIOITINH)cbbgt.SelectedIndex;
+                DialogResult = DialogResult.OK;
+            }
+
+           
+
+            /*  sinhVien = new SinhVien
+              {
+                  MaSinhVien = txtmsv.Text,
+                  Ho = txtho.Text,
+                  Ten = txtten.Text,
+                  NgaySinh = dtp.Value,
+                  GioiTinh = (GIOITINH)cbbgt.SelectedIndex,
+                  QueQuan = txtqq.Text,
+                  NoiSinh = txtns.Text,
+                  HinhDaiDien = picHinhDaiDien.ImageLocation,
+              };*/
+            /*
+                        var json = sinhVien.ToString();
+                        File.WriteAllText(fileName, json);
+                        MessageBox.Show("Bạn đã lưu dữ liệu thành công", "Thông báo",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);*/
         }
 
         private void picHinhDaiDien_Click(object sender, EventArgs e)

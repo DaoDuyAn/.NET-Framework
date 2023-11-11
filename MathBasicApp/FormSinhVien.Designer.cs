@@ -36,7 +36,7 @@
             txtten = new TextBox();
             label4 = new Label();
             label5 = new Label();
-            dtp = new DateTimePicker();
+            dtpns = new DateTimePicker();
             label6 = new Label();
             cbbgt = new ComboBox();
             txtns = new TextBox();
@@ -130,15 +130,15 @@
             label5.TabIndex = 7;
             label5.Text = "Ngày sinh:";
             // 
-            // dtp
+            // dtpns
             // 
-            dtp.CustomFormat = "dd/MM/yyyy";
-            dtp.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dtp.Format = DateTimePickerFormat.Custom;
-            dtp.Location = new Point(314, 305);
-            dtp.Name = "dtp";
-            dtp.Size = new Size(301, 39);
-            dtp.TabIndex = 3;
+            dtpns.CustomFormat = "dd/MM/yyyy";
+            dtpns.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dtpns.Format = DateTimePickerFormat.Custom;
+            dtpns.Location = new Point(314, 305);
+            dtpns.Name = "dtpns";
+            dtpns.Size = new Size(301, 39);
+            dtpns.TabIndex = 3;
             // 
             // label6
             // 
@@ -258,7 +258,9 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            CancelButton = btnBoQua;
             ClientSize = new Size(1210, 849);
+            ControlBox = false;
             Controls.Add(picHinhDaiDien);
             Controls.Add(label10);
             Controls.Add(label9);
@@ -270,7 +272,7 @@
             Controls.Add(label7);
             Controls.Add(cbbgt);
             Controls.Add(label6);
-            Controls.Add(dtp);
+            Controls.Add(dtpns);
             Controls.Add(label5);
             Controls.Add(txtten);
             Controls.Add(label4);
@@ -297,7 +299,7 @@
         private TextBox txtten;
         private Label label4;
         private Label label5;
-        private DateTimePicker dtp;
+        private DateTimePicker dtpns;
         private Label label6;
         private ComboBox cbbgt;
         private TextBox txtns;

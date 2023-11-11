@@ -12,7 +12,7 @@ namespace MathBasicApp
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //Application.Run(new FormMain());
-            Application.Run(new FormSinhVien());
+            Application.Run(new FormLopHoc());
         }
     }
 }
