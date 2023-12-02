@@ -107,7 +107,6 @@
             txtten.Name = "txtten";
             txtten.Size = new Size(290, 39);
             txtten.TabIndex = 2;
-            txtten.TextChanged += textBox3_TextChanged;
             // 
             // label4
             // 
@@ -118,7 +117,6 @@
             label4.Size = new Size(61, 32);
             label4.TabIndex = 5;
             label4.Text = "Tên:";
-            label4.Click += label4_Click;
             // 
             // label5
             // 
@@ -283,7 +281,6 @@
             Controls.Add(label1);
             Name = "FormSinhVien";
             Text = "FormSinhVien";
-            Load += FormSinhVien_Load;
             ((System.ComponentModel.ISupportInitialize)picHinhDaiDien).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -5,7 +5,9 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstApp", "FirstApp\FirstApp.csproj", "{16FE1DB3-5F14-43C7-BA8A-ABA3D6D0640C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathBasicApp", "MathBasicApp\MathBasicApp.csproj", "{A3D9F1CE-D424-4914-87C3-D07CCB6ADAE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathBasicApp", "MathBasicApp\MathBasicApp.csproj", "{A3D9F1CE-D424-4914-87C3-D07CCB6ADAE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogApp", "BlogApp\BlogApp.csproj", "{68845C7B-714A-4E41-8109-F49D75FE51BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A3D9F1CE-D424-4914-87C3-D07CCB6ADAE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3D9F1CE-D424-4914-87C3-D07CCB6ADAE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3D9F1CE-D424-4914-87C3-D07CCB6ADAE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68845C7B-714A-4E41-8109-F49D75FE51BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68845C7B-714A-4E41-8109-F49D75FE51BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68845C7B-714A-4E41-8109-F49D75FE51BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68845C7B-714A-4E41-8109-F49D75FE51BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

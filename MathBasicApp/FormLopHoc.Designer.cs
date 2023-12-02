@@ -55,18 +55,11 @@
             btnTaoDS = new Button();
             btnLuuDS = new Button();
             btnNapFile = new Button();
-            contextMenuStrip1 = new ContextMenuStrip(components);
-            contextMenuStrip2 = new ContextMenuStrip(components);
-            contextMenuStrip3 = new ContextMenuStrip(components);
-            toolStrip1 = new ToolStrip();
-            toolStrip2 = new ToolStrip();
             panel1 = new Panel();
             toolStrip3 = new ToolStrip();
             btnThemSinhVien = new ToolStripButton();
             btnSuaSinhVien = new ToolStripButton();
             btnXoaSinhVien = new ToolStripButton();
-            toolStrip5 = new ToolStrip();
-            toolStrip6 = new ToolStrip();
             ((System.ComponentModel.ISupportInitialize)numTuTiet).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numDenTiet).BeginInit();
             ((System.ComponentModel.ISupportInitialize)grdSinhVien).BeginInit();
@@ -200,7 +193,7 @@
             grdSinhVien.RowHeadersWidth = 62;
             grdSinhVien.RowTemplate.Height = 33;
             grdSinhVien.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            grdSinhVien.Size = new Size(1357, 379);
+            grdSinhVien.Size = new Size(1357, 822);
             grdSinhVien.TabIndex = 12;
             grdSinhVien.CellContentClick += grdSinhVien_CellContentClick;
             grdSinhVien.CellContentDoubleClick += grdSinhVien_CellContentDoubleClick;
@@ -303,49 +296,13 @@
             btnNapFile.UseVisualStyleBackColor = true;
             btnNapFile.Click += btnNapFile_Click;
             // 
-            // contextMenuStrip1
-            // 
-            contextMenuStrip1.ImageScalingSize = new Size(24, 24);
-            contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(61, 4);
-            // 
-            // contextMenuStrip2
-            // 
-            contextMenuStrip2.ImageScalingSize = new Size(24, 24);
-            contextMenuStrip2.Name = "contextMenuStrip2";
-            contextMenuStrip2.Size = new Size(61, 4);
-            // 
-            // contextMenuStrip3
-            // 
-            contextMenuStrip3.ImageScalingSize = new Size(24, 24);
-            contextMenuStrip3.Name = "contextMenuStrip3";
-            contextMenuStrip3.Size = new Size(61, 4);
-            // 
-            // toolStrip1
-            // 
-            toolStrip1.ImageScalingSize = new Size(24, 24);
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1507, 25);
-            toolStrip1.TabIndex = 17;
-            toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStrip2
-            // 
-            toolStrip2.ImageScalingSize = new Size(24, 24);
-            toolStrip2.Location = new Point(0, 25);
-            toolStrip2.Name = "toolStrip2";
-            toolStrip2.Size = new Size(1507, 25);
-            toolStrip2.TabIndex = 18;
-            toolStrip2.Text = "toolStrip2";
-            // 
             // panel1
             // 
             panel1.Controls.Add(grdSinhVien);
             panel1.Controls.Add(toolStrip3);
             panel1.Location = new Point(112, 344);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1361, 192);
+            panel1.Size = new Size(1361, 635);
             panel1.TabIndex = 19;
             // 
             // toolStrip3
@@ -385,34 +342,12 @@
             btnXoaSinhVien.Text = "Xóa sinh viên";
             btnXoaSinhVien.Click += btnXoaSinhVien_Click;
             // 
-            // toolStrip5
-            // 
-            toolStrip5.ImageScalingSize = new Size(24, 24);
-            toolStrip5.Location = new Point(0, 50);
-            toolStrip5.Name = "toolStrip5";
-            toolStrip5.Size = new Size(1507, 25);
-            toolStrip5.TabIndex = 20;
-            toolStrip5.Text = "toolStrip5";
-            // 
-            // toolStrip6
-            // 
-            toolStrip6.ImageScalingSize = new Size(24, 24);
-            toolStrip6.Location = new Point(0, 75);
-            toolStrip6.Name = "toolStrip6";
-            toolStrip6.Size = new Size(1507, 25);
-            toolStrip6.TabIndex = 21;
-            toolStrip6.Text = "toolStrip6";
-            // 
             // FormLopHoc
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1507, 1167);
             Controls.Add(panel1);
-            Controls.Add(toolStrip6);
-            Controls.Add(toolStrip5);
-            Controls.Add(toolStrip2);
-            Controls.Add(toolStrip1);
             Controls.Add(btnNapFile);
             Controls.Add(btnLuuDS);
             Controls.Add(btnTaoDS);
@@ -468,17 +403,10 @@
         private DataGridViewTextBoxColumn gioiTinhDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn noiSinhDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn queQuanDataGridViewTextBoxColumn;
-        private ContextMenuStrip contextMenuStrip1;
-        private ContextMenuStrip contextMenuStrip2;
-        private ContextMenuStrip contextMenuStrip3;
-        private ToolStrip toolStrip1;
-        private ToolStrip toolStrip2;
         private Panel panel1;
         private ToolStrip toolStrip3;
         private ToolStripButton btnThemSinhVien;
         private ToolStripButton btnSuaSinhVien;
         private ToolStripButton btnXoaSinhVien;
-        private ToolStrip toolStrip5;
-        private ToolStrip toolStrip6;
     }
 }

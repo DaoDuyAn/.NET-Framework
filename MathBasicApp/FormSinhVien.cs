@@ -18,7 +18,6 @@ namespace MathBasicApp
         {
             InitializeComponent();
 
-
             this.sinhVien = sinhVien;
             if (sinhVien != null)
             {
@@ -31,6 +30,7 @@ namespace MathBasicApp
                 cbbgt.SelectedIndex = (int)sinhVien.GioiTinh;
                 picHinhDaiDien.ImageLocation = sinhVien.HinhDaiDien;
             }
+
             //LoadSinhVienTuFile();
         }
 
@@ -54,21 +54,6 @@ namespace MathBasicApp
         }
 
         string fileName = "sinhvien.json";
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void FormSinhVien_Load(object sender, EventArgs e)
-        {
-
-        }
-
         public SinhVien sinhVien { set; get; }
         private void btnDongY_Click(object sender, EventArgs e)
         {
@@ -87,7 +72,6 @@ namespace MathBasicApp
             }
             else
             {
-
                 // Cập nhật
                 sinhVien = new SinhVien();
                 sinhVien.Ho = txtho.Text;
@@ -101,7 +85,7 @@ namespace MathBasicApp
                 DialogResult = DialogResult.OK;
             }
 
-           
+
 
             /*  sinhVien = new SinhVien
               {

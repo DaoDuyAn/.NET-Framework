@@ -53,14 +53,6 @@ namespace MathBasicApp
             hienThiLopHoc(lopHoc);
         }
 
-        private void grdSinhVien_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            var sinhVien = sinhVienBindingSource.Current as SinhVien;
-
-            var formSinhVien = new FormSinhVien(sinhVien);
-            formSinhVien.ShowDialog();
-        }
-
         string fileName = "LopHoc.json";
         private void btnLuuDS_Click(object sender, EventArgs e)
         {
@@ -73,6 +65,14 @@ namespace MathBasicApp
                 MessageBox.Show("Lưu dữ liệu thành công", "Thông báo");
             }
 
+        }
+
+        private void grdSinhVien_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var sinhVien = sinhVienBindingSource.Current as SinhVien;
+
+            var formSinhVien = new FormSinhVien(sinhVien);
+            formSinhVien.ShowDialog();
         }
 
         private void btnNapFile_Click(object sender, EventArgs e)
