@@ -65,5 +65,10 @@ namespace BlogApp
                 articleDTOBindingSource.DataSource = null;
             }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

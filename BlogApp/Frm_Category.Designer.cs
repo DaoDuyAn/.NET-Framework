@@ -158,6 +158,7 @@
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(90, 42);
             btnSua.Text = "Sửa";
+            btnSua.Click += btnSua_Click;
             // 
             // btnThem
             // 
@@ -168,6 +169,7 @@
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(115, 42);
             btnThem.Text = "Thêm";
+            btnThem.Click += btnThem_Click;
             // 
             // Frm_Category
             // 

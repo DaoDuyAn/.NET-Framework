@@ -154,7 +154,7 @@
             cbbgt.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbbgt.FormattingEnabled = true;
             cbbgt.Items.AddRange(new object[] { "Nam", "Nữ", "Khác" });
-            cbbgt.Location = new Point(748, 300);
+            cbbgt.Location = new Point(747, 304);
             cbbgt.Name = "cbbgt";
             cbbgt.Size = new Size(290, 40);
             cbbgt.TabIndex = 4;

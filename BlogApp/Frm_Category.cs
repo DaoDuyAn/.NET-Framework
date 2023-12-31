@@ -67,5 +67,27 @@ namespace BlogApp
 
             }
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            var f = new FormThem();
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                LoadCategory();
+            }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            var selCat = categoryDTOBindingSource.Current as CategoryDTO;
+            if (selCat != null)
+            {
+                var f = new FormThem(selCat);
+                if (f.ShowDialog() == DialogResult.OK)
+                {
+                    LoadCategory();
+                }
+            }
+        }
     }
 }
